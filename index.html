@@ -2,32 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Face Changer Video Call</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LiveKit Face Video Call</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-      font-family: sans-serif;
-      flex-direction: column;
+      padding: 0;
     }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #00ffd5;
+    }
+
     video {
       width: 90%;
       max-width: 600px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      border: 2px solid #00ffd5;
+      box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
+    }
+
+    .status {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h2>Live Video Call</h2>
+  <h1>🔴 Live Video Face Call</h1>
   <video id="local-video" autoplay muted playsinline></video>
+  <div class="status" id="status">Waiting for camera permission...</div>
 
-  <script type="module" src="main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
